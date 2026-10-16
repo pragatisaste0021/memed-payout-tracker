@@ -69,7 +69,7 @@ memed-payout-tracker/
 ### 1. Clone the repository
 
 ```bash
-git clone <your-github-repository-url>
+git clone <https://github.com/pragatisaste0021/memed-payout-tracker>
 cd memed-payout-tracker
 ```
 
