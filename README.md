@@ -239,7 +239,7 @@ The payout utility tests cover milestone selection, incremental payouts, budget 
 
 ## Future Improvements
 
-- Integrate official platform APIs for verified view counts.
+- Integrate Instagram and YouTube APIs to verify actual post views.
 - Add campaign analytics and payout history.
-- Add automated integration tests for concurrent requests.
-- Add monitoring, rate limiting, and production security controls.
+- Add integration tests for concurrent payout requests.
+- Add rate limiting and monitoring for production use.
