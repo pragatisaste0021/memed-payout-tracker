@@ -243,3 +243,16 @@ The payout utility tests cover milestone selection, incremental payouts, budget 
 - Add campaign analytics and payout history.
 - Add integration tests for concurrent payout requests.
 - Add rate limiting and monitoring for production use.
+
+
+## Scalability Considerations
+
+To support 10,000 creators, I would scale the application incrementally:
+
+- **Stateless backend:** Run multiple backend instances behind a load balancer so requests can be handled concurrently.
+- **Database optimization:** Add indexes for frequently queried fields, such as campaign IDs, creator IDs, and submission ownership. Monitor query performance as the dataset grows.
+- **Asynchronous processing:** Process view updates and payout-related background tasks through a queue when appropriate, while preserving atomic budget allocation and preventing duplicate payouts.
+- **Caching:** Cache frequently accessed campaign lists using Redis, with suitable expiration and invalidation when campaigns change.
+- **Monitoring:** Track API latency, database performance, queue delays, and payout failures to identify bottlenecks before increasing capacity.
+
+I would load-test the application and use the results to determine which components need scaling first.
