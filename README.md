@@ -2,6 +2,13 @@
 
 A full-stack web application for managing influencer marketing campaigns, tracking creator submissions, and calculating payouts based on view milestones while enforcing campaign budget limits.
 
+## Live Demo
+
+- **Frontend:** https://memed-payout-frontend.vercel.app/
+- **Backend:** https://memed-payout-backend.onrender.com
+
+The backend may take a little time to respond after inactivity because it runs on Render's free plan.
+
 ## Features
 
 ### Authentication
@@ -69,7 +76,7 @@ memed-payout-tracker/
 ### 1. Clone the repository
 
 ```bash
-git clone <https://github.com/pragatisaste0021/memed-payout-tracker>
+git clone https://github.com/pragatisaste0021/memed-payout-tracker
 cd memed-payout-tracker
 ```
 
@@ -100,8 +107,6 @@ npm run dev
 ```
 
 The backend runs on `http://localhost:5000`.
-
-Check the health endpoint at `http://localhost:5000/api/health`.
 
 ### 3. Configure the frontend
 
@@ -137,7 +142,6 @@ Open `http://localhost:3000`.
 | POST | `/api/submissions` | Submit a post (creator only) |
 | GET | `/api/submissions/mine` | List the creator's submissions |
 | PATCH | `/api/submissions/:id/views` | Update views and recalculate payout |
-| GET | `/api/health` | Check backend health |
 
 Protected endpoints require a bearer JWT unless otherwise configured by the API.
 
