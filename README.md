@@ -212,6 +212,10 @@ The payout logic was tested with the following scenarios:
 
 These tests validate the scenarios described above but do not guarantee correctness under every possible concurrency condition.
 
+## View Count Updates
+
+- View counts are updated through `PATCH /api/submissions/:id/views` to simulate platform data. This endpoint can be tested using an API client, such as Postman, or PowerShell. The application recalculates payouts based on the updated view count and the campaign's remaining budget.
+
 ## Testing
 
 Run the backend unit tests:
